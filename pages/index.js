@@ -1,30 +1,32 @@
-import Head from 'next/head'
-import styled, { createGlobalStyle } from 'styled-components';
+import Head from 'next/head';
+import React from 'react';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { MainContainer, Grid } from '../components';
+import { globalStyles, lightTheme } from '../styles';
 
-const GlobalStyles = createGlobalStyle``;
-const MainContainer = styled.div`
-  html, body, * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  h1 {
-    font-variant: small-caps;
-  }
-`;
+const GlobalStyles = createGlobalStyle`${globalStyles}`;
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <MainContainer>
-        <GlobalStyles />
-        <h1>Hello world!</h1>
-      </MainContainer>
-    </>
-  )
+    return (
+        <>
+            <Head>
+                <meta charSet="utf-8" />
+                <title>castro.dev</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <ThemeProvider theme={lightTheme}>
+                <GlobalStyles />
+                <MainContainer>
+                    <Grid minHeight="80vh" width="80vw">
+                        <div style={{ backgroundColor: 'red' }} />
+                        <Grid columns="1fr">
+                            <div style={{ backgroundColor: 'blue' }} />
+                            <div style={{ backgroundColor: 'blue' }} />
+                            <div style={{ backgroundColor: 'blue' }} />
+                        </Grid>
+                    </Grid>
+                </MainContainer>
+            </ThemeProvider>
+        </>
+    );
 }
