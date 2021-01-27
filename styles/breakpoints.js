@@ -1,7 +1,7 @@
 const deviceWidth = {
-    phone: '375px',
+    phone: '425px',
     tablet: '768px',
-    laptop: '1280px',
+    laptop: '1152px',
     desktop: '1920px',
 };
 

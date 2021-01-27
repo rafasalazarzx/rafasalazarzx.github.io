@@ -1,0 +1,68 @@
+const jobs = [
+    {
+        companyName: 'Human API',
+        title: 'Lead Software Engineer',
+        location: 'Guadalajara, MX',
+        startDate: '2019-07',
+        endDate: null,
+        type: 'fullTime',
+    },
+    {
+        companyName: 'Ex Makhina',
+        title: 'Frontend Engineer',
+        location: '',
+        startDate: '2019-06',
+        endDate: '2019-12',
+        type: 'freelance',
+    },
+    {
+        companyName: 'Wizeline',
+        title: 'Senior Software Engineer',
+        location: 'Guadalajara, MX',
+        startDate: '2015-11',
+        endDate: '2019-07',
+        type: 'fullTime',
+    },
+    {
+        companyName: 'BlueMessaging',
+        title: 'Mobile Applications Developer',
+        location: 'Mexico City, MX',
+        startDate: '2014-03',
+        endDate: '2015-06',
+        type: 'fullTime',
+    },
+    {
+        companyName: 'Editorial Otras Inquisiciones',
+        title: 'iOS Developer',
+        location: '',
+        startDate: '2013-04',
+        endDate: '2013-06',
+        type: 'freelance',
+    },
+    {
+        companyName: 'ktc digital agency',
+        title: 'Java Developer',
+        location: 'Mexico City, MX',
+        startDate: '2012-01',
+        endDate: '2013-01',
+        type: 'partTime',
+    },
+    {
+        companyName: 'Click&Pick',
+        title: 'Developer',
+        location: '',
+        startDate: '2011-11',
+        endDate: '2012-05',
+        type: 'freelance',
+    },
+    {
+        companyName: 'foreach',
+        title: 'Java Developer',
+        location: 'Mexico City, MX',
+        startDate: '2009-06',
+        endDate: '2010-01',
+        type: 'partTime',
+    },
+];
+
+export default jobs;
