@@ -44,7 +44,7 @@ Grid.defaultProps = {
     tabletColumns: '2fr 3fr',
     laptopColumns: '2fr 3fr',
     desktopColumns: '1fr 2fr',
-    minHeight: 'none',
+    minHeight: 'auto',
     width: '100%;',
 };
 
