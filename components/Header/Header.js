@@ -13,24 +13,24 @@ const Header = () => (
         </StyledHeader.Logo>
         <StyledHeader.SocialLinksList>
             <StyledHeader.SocialLinksListItem>
-                <StyledHeader.LinkedInSocialLink href="https://linkedin.com">
+                <StyledHeader.LinkedInSocialLink href="https://www.linkedin.com/in/castrosalazar/">
                     LinkedIn
                 </StyledHeader.LinkedInSocialLink>
             </StyledHeader.SocialLinksListItem>
             <StyledHeader.SocialLinksListItem>
-                <StyledHeader.InstagramSocialLink href="https://linkedin.com">
-                    LinkedIn
-                </StyledHeader.InstagramSocialLink>
-            </StyledHeader.SocialLinksListItem>
-            <StyledHeader.SocialLinksListItem>
-                <StyledHeader.TwitterSocialLink href="https://linkedin.com">
-                    LinkedIn
+                <StyledHeader.TwitterSocialLink href="https://twitter.com/rafasalazarzx">
+                    Twitter
                 </StyledHeader.TwitterSocialLink>
             </StyledHeader.SocialLinksListItem>
             <StyledHeader.SocialLinksListItem>
-                <StyledHeader.GithubSocialLink href="https://linkedin.com">
-                    LinkedIn
+                <StyledHeader.GithubSocialLink href="https://github.com/rafasalazarzx">
+                    GitHub
                 </StyledHeader.GithubSocialLink>
+            </StyledHeader.SocialLinksListItem>
+            <StyledHeader.SocialLinksListItem>
+                <StyledHeader.InstagramSocialLink href="https://www.instagram.com/rafasalazarzx/">
+                    Instagram
+                </StyledHeader.InstagramSocialLink>
             </StyledHeader.SocialLinksListItem>
         </StyledHeader.SocialLinksList>
     </div>
