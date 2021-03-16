@@ -3,13 +3,13 @@ import { breakpoints } from '../../styles';
 
 const StyledJobRow = {
     Container: styled.section`
+        border-top: ${({ first }) => (first ? 'none' : '1px solid #ccc')};
         display: block;
         height: auto;
+        padding-top: ${({ first }) => (first ? '0' : '1rem')};
         width: 100%;
-        border-top: ${({ first }) => (first ? 'none' : '1px solid #ccc')};
-        padding-top: 1rem;
     `,
-    Header: styled.header`
+    Header: styled.div`
         clear: both;
         display: block;
         width: 100%;
@@ -21,7 +21,13 @@ const StyledJobRow = {
         }
     `,
     Title: styled.h2`
+        color: ${({ theme }) => theme.primary};
         float: left;
+        max-width: ${({ hasType }) => (hasType ? '60vw' : 'none')};
+
+        ${breakpoints.tablet} {
+            max-width: none;
+        }
     `,
     Subtitle: styled.h3`
         span {
@@ -38,11 +44,13 @@ const StyledJobRow = {
     `,
     Dates: styled.h4``,
     Type: styled.h5`
-        background-color: #666;
+        background-color: ${({ theme }) => theme.secondary};
         border-radius: 10px;
         color: white;
         float: right;
+        font-size: 0.7rem;
         font-weight: normal;
+        margin-top: 2px;
         padding: 3px 8px;
 
         ${breakpoints.phone} {

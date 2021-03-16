@@ -1,6 +1,7 @@
 const lightTheme = {
     background: '#eee',
-    title: 'magenta',
+    primary: '#1e3888',
+    secondary: '#c96979',
 };
 
 export default lightTheme;
