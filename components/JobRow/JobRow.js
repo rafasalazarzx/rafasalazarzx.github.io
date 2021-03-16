@@ -14,7 +14,9 @@ const JobRow = ({
 }) => (
     <StyledJobRow.Container first={first}>
         <StyledJobRow.Header>
-            <StyledJobRow.Title>{companyName}</StyledJobRow.Title>
+            <StyledJobRow.Title hasType={!!type}>
+                {companyName}
+            </StyledJobRow.Title>
             {type && (
                 <StyledJobRow.Type>{type.toUpperCase()}</StyledJobRow.Type>
             )}
@@ -38,7 +40,7 @@ JobRow.propTypes = {
     location: PropTypes.string.isRequired,
     startDate: PropTypes.string,
     endDate: PropTypes.string,
-    type: PropTypes.oneOf(['partTime', 'fullTime', 'freelance']).isRequired,
+    type: PropTypes.oneOf(['partTime', 'fullTime', 'freelance', '']),
     first: PropTypes.bool,
 };
 
@@ -46,6 +48,7 @@ JobRow.defaultProps = {
     startDate: '',
     endDate: '',
     first: false,
+    type: '',
 };
 
 export default JobRow;

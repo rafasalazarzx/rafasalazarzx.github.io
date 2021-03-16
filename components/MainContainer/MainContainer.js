@@ -7,7 +7,7 @@ const MainContainer = styled.div`
     justify-content: center;
     min-height: 100vh;
     padding: 20px 10px 30px;
-    width: 100vw;
+    width: 100%;
 
     ${breakpoints.phone} {
         padding-left: 20px;
