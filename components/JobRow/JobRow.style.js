@@ -46,7 +46,7 @@ const StyledJobRow = {
     Type: styled.h5`
         background-color: ${({ theme }) => theme.secondary};
         border-radius: 10px;
-        color: white;
+        color: ${({ theme }) => theme.background};
         float: right;
         font-size: 0.7rem;
         font-weight: normal;

@@ -1,9 +1,10 @@
 {
     "extends": [
+        "plugin:@next/next/recommended",
         "airbnb",
         "prettier"
     ],
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "parserOptions": {
         "sourceType": "module",
         "ecmaVersion": 2019,
@@ -18,5 +19,9 @@
         "react/jsx-props-no-spreading": "off",
         "react/prop-types": "warn",
         "semi": "error"
+    },
+    "env": {
+        "browser": true,
+        "node": true
     }
 }

@@ -18,17 +18,18 @@ const StyledHeader = {
         display: block;
         height: 100px;
         width: 100%;
+        margin-bottom: 20px;
 
         ${breakpoints.tablet} {
             height: 80px;
         }
     `,
     FirstName: styled.text`
-        fill: #c96979;
+        fill: ${({ theme }) => theme.secondary};
         font-family: 'Montserrat Alternates', sans-serif;
     `,
     LastName: styled.text`
-        fill: #1e3888;
+        fill: ${({ theme }) => theme.primary};
         font-family: 'Montserrat Alternates', sans-serif;
     `,
     SocialLinksList: styled.ul`
@@ -47,6 +48,10 @@ const StyledHeader = {
         display: block;
         height: 2rem;
         width: 2rem;
+
+        @media (prefers-color-scheme: dark) {
+            filter: invert(83%);
+        }
 
         ${breakpoints.tablet} {
             height: 2.5rem;

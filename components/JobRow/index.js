@@ -1,1 +1,3 @@
-export { default } from './JobRow';
+import JobRow from './JobRow';
+
+export default JobRow;
