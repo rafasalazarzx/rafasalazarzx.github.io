@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StyledJobRow from './JobRow.style';
 
-const JobRow = ({
+function JobRow({
     companyName,
     endDate,
     first,
@@ -11,28 +11,30 @@ const JobRow = ({
     startDate,
     title,
     type,
-}) => (
-    <StyledJobRow.Container first={first}>
-        <StyledJobRow.Header>
-            <StyledJobRow.Title hasType={!!type}>
-                {companyName}
-            </StyledJobRow.Title>
-            {type && (
-                <StyledJobRow.Type>{type.toUpperCase()}</StyledJobRow.Type>
-            )}
-        </StyledJobRow.Header>
-        <StyledJobRow.Header>
-            <StyledJobRow.Subtitle>
-                {title}
-                {location && <span>{location}</span>}
-            </StyledJobRow.Subtitle>
-            <StyledJobRow.Dates>
-                {startDate && `${moment(startDate).format('MMMM YYYY')} - `}
-                {endDate ? moment(endDate).format('MMMM YYYY') : 'Present'}
-            </StyledJobRow.Dates>
-        </StyledJobRow.Header>
-    </StyledJobRow.Container>
-);
+}) {
+    return (
+        <StyledJobRow.Container first={first}>
+            <StyledJobRow.Header>
+                <StyledJobRow.Title hasType={!!type}>
+                    {companyName}
+                </StyledJobRow.Title>
+                {type && (
+                    <StyledJobRow.Type>{type.toUpperCase()}</StyledJobRow.Type>
+                )}
+            </StyledJobRow.Header>
+            <StyledJobRow.Header>
+                <StyledJobRow.Subtitle>
+                    {title}
+                    {location && <span>{location}</span>}
+                </StyledJobRow.Subtitle>
+                <StyledJobRow.Dates>
+                    {startDate && `${moment(startDate).format('MMMM YYYY')} - `}
+                    {endDate ? moment(endDate).format('MMMM YYYY') : 'Present'}
+                </StyledJobRow.Dates>
+            </StyledJobRow.Header>
+        </StyledJobRow.Container>
+    );
+}
 
 JobRow.propTypes = {
     companyName: PropTypes.string.isRequired,
