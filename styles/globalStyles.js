@@ -1,7 +1,7 @@
-import lightTheme from './lightTheme';
+import { createGlobalStyle } from 'styled-components';
 import print from './print';
 
-const globalStyles = `
+const GlobalStyles = createGlobalStyle`
   html, body, * {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -10,7 +10,8 @@ const globalStyles = `
   }
 
   body {
-    background-color: ${lightTheme.background};
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.textColor};
 
     ${print} {
       background-color: white;
@@ -39,4 +40,4 @@ const globalStyles = `
   }
 `;
 
-export default globalStyles;
+export default GlobalStyles;

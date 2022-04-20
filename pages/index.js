@@ -1,13 +1,30 @@
 import Head from 'next/head';
-import React from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import React, { useEffect, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
 import { MainContainer, Grid, JobRow, Header } from '../components';
 import { jobs, schools } from '../data';
-import { globalStyles, lightTheme } from '../styles';
-
-const GlobalStyles = createGlobalStyle`${globalStyles}`;
+import { GlobalStyles, lightTheme, darkTheme } from '../styles';
 
 export default function Home() {
+    const [useDarkTheme, setUseDarkTheme] = useState(false);
+
+    useEffect(() => {
+        if (!window.matchMedia) {
+            return;
+        }
+
+        const isDarkModePreferred = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+        ).matches;
+        setUseDarkTheme(isDarkModePreferred);
+
+        window
+            .matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', ({ matches }) => {
+                setUseDarkTheme(matches);
+            });
+    }, []);
+
     return (
         <>
             <Head>
@@ -20,7 +37,7 @@ export default function Home() {
                   rel="stylesheet"
                 />
             </Head>
-            <ThemeProvider theme={lightTheme}>
+            <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
                 <GlobalStyles />
                 <MainContainer>
                     <Grid>
